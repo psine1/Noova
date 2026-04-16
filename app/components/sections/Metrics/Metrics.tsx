@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import MetricCard from "../../ui/Cards/MetricCard";
 import styles from "./Metrics.module.css";
 
@@ -28,7 +29,7 @@ interface Props {
   data: MetricsData;
 }
 
-const iconMap: Record<string, JSX.Element> = {
+const iconMap: Record<string, ReactNode> = {
   layers: <LayersIcon />,
   chessPiece: <ChessPieceIcon />,
   chartNetwork: <ChartNetwork />,
