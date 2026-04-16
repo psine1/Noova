@@ -1,0 +1,80 @@
+.card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  cursor: pointer;
+}
+
+/* IMAGE */
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* LOGO */
+.logo {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  height: 40px;
+  z-index: 2;
+}
+
+/* INFO BOX */
+.info {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  right: 16px;
+
+  padding: 16px;
+  border-radius: 12px;
+
+  background: rgba(0, 0, 0, 0.9);
+  color: #ffffff;
+
+  transition: all 0.3s ease;
+}
+
+/* TEXT */
+.info h3 {
+  font-size: var(--text-card);
+  margin-bottom: 4px;
+  font-weight: 700;
+}
+
+.info p {
+  font-size: var(--text-body);
+  padding-right: 5rem;
+}
+
+/* HOVER EFFECT 🔥 */
+.card:hover .info {
+  background: rgba(255, 255, 255, 0.85);
+  color: #000000; 
+}
+
+/* opcional: levantar card */
+.card:hover {
+  transform: translateY(-4px);
+  transition: 0.3s;
+}
+
+
+
+.line {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 16px;
+
+  padding: 4px;
+  border-radius: 0px 0px 12px 0px;
+
+  background: var(--color-primary);
+  color: white;
+
+  transition: all 0.3s ease;
+}

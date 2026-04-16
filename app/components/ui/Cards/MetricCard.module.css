@@ -1,0 +1,41 @@
+.metricCard {
+    background-color: #4aff9624;
+    border: 1px solid #4AFF96;
+    border-radius: 16px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    min-width: 160px;
+}
+
+.value {
+    font-size: var(--text-main-heading);
+    font-family: var(--font-heading);
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+.title {
+    font-size: var(--title-card);
+    font-family: var(--font-heading);
+    font-weight: 700;
+    color: var(--color-white);
+    line-height: 1;
+}
+
+.content {
+    font-size: var(--text-body);
+    font-family: var(--font-heading);
+    font-weight: 400;
+    color: var(--color-white);
+    line-height: 1;
+    padding: 10px 0px 10px 0px;
+}
+
+
+@media (max-width: 767px) {
+
+.content{
+    display: none;
+}
+}

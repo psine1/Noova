@@ -1,0 +1,5 @@
+.cta:hover {
+  background: var(--color-primary);
+  color: black;
+}
+

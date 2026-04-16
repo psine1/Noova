@@ -1,0 +1,29 @@
+.solutionCard {
+    background-color: #000;
+    border: 1px solid #4AFF96;
+    border-radius: 16px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    min-width: 160px;
+}
+
+
+.title {
+    font-size: var(--title-card);
+    font-family: var(--font-heading);
+    font-weight: 700;
+    color: var(--color-white);
+    line-height: 1;
+}
+
+.content {
+    font-size: var(--text-body);
+    font-family: var(--font-heading);
+    font-weight: 400;
+    color: var(--color-white);
+    line-height: 1;
+    padding: 10px 0px 10px 0px;
+}
+
+
