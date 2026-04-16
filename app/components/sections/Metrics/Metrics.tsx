@@ -2,13 +2,9 @@ import MetricCard from "../../ui/Cards/MetricCard";
 import styles from "./Metrics.module.css";
 
 import { LayersIcon, ChessPieceIcon, ChartNetwork } from "../../icons/DesignIcon";
-import type { ReactNode } from "react";
-
-/* 🔥 TIPADO FUERTE DE ICONS */
-type BulletIcon = "layers" | "chessPiece" | "chartNetwork";
 
 interface BulletItem {
-  icon: BulletIcon;
+  icon: "layers" | "chessPiece" | "chartNetwork";
   title: string;
   text: string;
 }
@@ -32,8 +28,7 @@ interface Props {
   data: MetricsData;
 }
 
-/* 🔥 FIX IMPORTANTE */
-const iconMap: Record<BulletIcon, ReactNode> = {
+const iconMap: Record<string, JSX.Element> = {
   layers: <LayersIcon />,
   chessPiece: <ChessPieceIcon />,
   chartNetwork: <ChartNetwork />,
@@ -56,7 +51,7 @@ export default function Metrics({ data }: Props) {
               <div key={i} className={styles.item}>
                 
                 <div className={styles.icon}>
-                  {iconMap[item.icon]}
+                  {iconMap[item.icon] || null}
                 </div>
 
                 <div className={styles.text}>
@@ -71,7 +66,7 @@ export default function Metrics({ data }: Props) {
 
         <div className={styles.grid}>
           {data.metrics.map((item, i) => (
-            <MetricCard key={i} {...item} />
+            <MetricCard key={i} {...item} icon={item.icon || ""} />
           ))}
         </div>
 

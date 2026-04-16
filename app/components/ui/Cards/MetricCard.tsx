@@ -12,7 +12,15 @@ const iconMap = {
   // physics: <PhysicsIcon />,
 };
 
-export default function MetricCard({ icon, value, title, content }) {
+interface Props {
+  icon?: string; // 🔥 ESTE ES EL FIX
+  value: string;
+  title: string;
+  content?: string;
+}
+
+
+export default function MetricCard({ icon, value, title, content }: Props) {
   return (
     <div className={styles.metricCard}>
       
