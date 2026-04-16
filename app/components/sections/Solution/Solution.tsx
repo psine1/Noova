@@ -1,8 +1,13 @@
 import styles from "./Solution.module.css";
 import SolutionCard from "../../ui/Cards/SolutionCard";
 
+interface ImageItem {
+  src: string;
+  bg?: string;
+}
+
 interface Props {
-  images?: string;
+  images?: ImageItem[];
   label: string;
   description?: string;
   title?: string;
@@ -15,14 +20,18 @@ export default function Solution({
   title,
   content,
 }: Props) {
+  const mainImage = images?.[0];
+
   return (
     <section className={styles.section}>
       <div className={styles.container}>
 
-        {images?.[0] && (
+        {mainImage && (
           <div
-            className={styles.main} style={{ background: images[0].bg }} >
-            <img src={images[0].src} alt="" />
+            className={styles.main}
+            style={{ background: mainImage.bg || "#0a0a0a" }}
+          >
+            <img src={mainImage.src} alt="" />
           </div>
         )}
 
