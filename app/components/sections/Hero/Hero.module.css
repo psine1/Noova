@@ -51,6 +51,8 @@
 }
 
 .content h1 {
+  max-width: 900px;
+  margin: 0 auto 20px;  
   margin-bottom: 20px;
   font-family: var(--font-heading);
   font-size: var(--text-hero-heading);
@@ -59,6 +61,8 @@
 }
 
 .content p {
+  max-width: 600px;
+  margin: 0 auto 20px;
   font-family: var(--font-heading);
   color: var(--color-white);
   font-size: var(--text-card);  

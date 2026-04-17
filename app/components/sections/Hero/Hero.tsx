@@ -10,12 +10,12 @@ export default function Hero() {
 
         <div className={styles.content}>
           <h1 className={styles.title}>
-            Tu producto digital, al nivel <br />
+            Tu producto digital, al nivel 
             que tu audiencia espera.
           </h1>
 
           <p >
-            Transformamos tus ideas en interfaces vivas <br />
+            Transformamos tus ideas en interfaces vivas 
             con Product Design y ejecución técnica.
           </p>
 

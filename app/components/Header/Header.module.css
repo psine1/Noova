@@ -73,3 +73,86 @@
   color: var(--color-text-dark-secondary);
 }
 
+
+.desktop {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.mobileToggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: var(--color-text-dark)
+}
+
+
+.mobileMenu {
+  position: fixed;
+  inset: 0;
+  background: #0a0a0a;
+  z-index: 100;
+
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+
+    animation: fadeIn 0.3s ease;
+}
+
+.mobileHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+.mobileLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.mobileLinks a {
+  font-size: 28px;
+  font-weight: 500;
+  color: white;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  padding-bottom: 16px;
+}
+
+.mobileLinks a {
+  transition: 0.3s;
+}
+
+.mobileLinks a:hover {
+  color: #4ade80;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+@media (max-width: 768px) {
+  .desktop {
+    display: none;
+  }
+
+  .mobileToggle {
+    display: block;
+  }
+
+  .nav{
+    width: 75%;
+  }
+  
+}
