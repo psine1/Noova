@@ -5,6 +5,9 @@ import styles from "./Metrics.module.css";
 import { LayersIcon, ChessPieceIcon, ChartNetwork } from "../../icons/DesignIcon";
 import type { MetricIcon } from "../../ui/Cards/MetricCard";
 
+type BulletIcon = "layers" | "chessPiece" | "chartNetwork";
+
+
 interface BulletItem {
   icon: BulletIcon; 
   title: string;
@@ -30,7 +33,6 @@ interface Props {
   data: MetricsData;
 }
 
-type BulletIcon = "layers" | "chessPiece" | "chartNetwork";
 
 const iconMap: Record<BulletIcon, ReactNode> = {
   layers: <LayersIcon />,

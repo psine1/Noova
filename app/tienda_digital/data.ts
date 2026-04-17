@@ -1,3 +1,5 @@
+
+
 export const ecommerceData = {
   hero: {
     label: "e-commerce & brand ",
@@ -16,17 +18,17 @@ metrics: {
 
 bullets: [
   {
-    icon: "layers",
+    icon: "layers" as const,
     title: "Independencia de Marca: ",
     text: "Crear un ecosistema propio para dejar de pagar comisiones altas y recuperar el control total sobre la base de datos de clientes.",
   },
   {
-    icon: "chessPiece",
+    icon: "chessPiece" as const,
     title: "Profesionalización de la Oferta: ",
     text: "El flujo de compra anterior era manual y disperso. Necesitaban una interfaz que proyectara la confianza de un retailer de primer nivel para captar usuarios más exigentes.",
   },
   {
-    icon: "chartNetwork",
+    icon: "chartNetwork" as const,
     title: "Eficiencia en la Gestión: ",
     text: " El equipo invertía demasiado tiempo en tareas administrativas. El reto era automatizar el proceso de punta a punta: desde la exhibición del producto hasta la confirmación del pago.",
   },
