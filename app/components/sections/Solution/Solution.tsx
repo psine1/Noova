@@ -1,9 +1,16 @@
 import styles from "./Solution.module.css";
-import SolutionCard from "../../ui/Cards/SolutionCard";
+import SolutionCard, { type SolutionIcon } from "../../ui/Cards/SolutionCard";
 
 interface ImageItem {
   src: string;
   bg?: string;
+}
+
+interface ContentItem {
+  icon?: SolutionIcon;
+  value?: string;
+  title: string;
+  content?: string;
 }
 
 interface Props {
@@ -11,7 +18,7 @@ interface Props {
   label: string;
   description?: string;
   title?: string;
-  content?: any[];
+  content?: ContentItem[];
 }
 
 export default function Solution({
