@@ -36,25 +36,25 @@ bullets: [
 
   metrics: [
     {
-      icon: "flame",
+      icon: "flame" as const,
       value: "+60%",
       title: "Ventas Mensuales",
       content: "Incremento sostenido en el volumen de transacciones desde el primer trimestre de lanzamiento."
     },
     {
-      icon: "user",
+      icon: "user" as const,
       value: "90%",
       title: "Satisfacción del usuario",
       content: "Reflejada en la tasa de recompra y en la reducción de consultas por soporte post-venta."      
     },
     {
-      icon: "download",
+      icon: "download" as const,
       value: "3x",
       title: "Retención",
       content: "Recuperación del capital invertido en el desarrollo gracias al ahorro en comisiones de plataformas externas."      
     },
     {
-      icon: "ticket",
+      icon: "ticket" as const,
       value: "+45%",
       title: "Conversión",
       content: "Logrado mediante una arquitectura de navegación que incentiva la compra de productos complementarios (cross-selling)."      
@@ -75,25 +75,25 @@ solution: {
 
   content: [
     {
-      icon: "flame",
+      icon: "flame" as const,
       value: "",
       title: "Enfoque en Publishers:",
       content: "Navegación directa para que inversores auditen servicios con rapidez."
     },
     {
-      icon: "user",
+      icon: "user" as const,
       value: "",
       title: "SaExperiencia Inmersiva:",
       content: "Animaciones HTML5 fluidas que prueban la calidad técnica al instante."      
     },
     {
-      icon: "download",
+      icon: "download" as const,
       value: "",
       title: "Hub de Reclutamiento:",
       content: "Sistema de postulación ágil que refleja la cultura y atrae al talento."      
     },
     {
-      icon: "ticket",
+      icon: "ticket" as const,
       value: "",
       title: "Desarrollo Escalable:",
       content: "Código modular para actualizar la web y perfiles sin depender de terceros."      
