@@ -1,6 +1,7 @@
 import styles from "./Solution.module.css";
 import SolutionCard, { type SolutionIcon } from "../../ui/Cards/SolutionCard";
 
+
 interface ImageItem {
   src: string;
   bg?: string;
