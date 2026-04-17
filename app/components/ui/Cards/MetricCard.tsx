@@ -9,6 +9,7 @@ const iconMap: Record<MetricIcon, ReactNode> = {
   user: <UserIcon />,
   download: <DownloadIcon />,
   ticket: <TicketIcon />,
+  
 };
 
 interface Props {
@@ -16,6 +17,7 @@ interface Props {
   value: string;
   title: string;
   content?: string;
+  
 }
 
 export default function MetricCard({ icon, value, title, content }: Props) {

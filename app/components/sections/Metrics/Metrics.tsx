@@ -66,8 +66,8 @@ export default function Metrics({ data }: Props) {
         </div>
 
         <div className={styles.grid}>
-          {data.metrics.map((item, i) => (
-            <MetricCard key={i} {...item} icon={item.icon || ""} />
+          {data.metrics.map((item, i) => (            
+            <MetricCard key={i} {...item} icon={item.icon} />
           ))}
         </div>
 
