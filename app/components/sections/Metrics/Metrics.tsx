@@ -3,6 +3,7 @@ import MetricCard from "../../ui/Cards/MetricCard";
 import styles from "./Metrics.module.css";
 
 import { LayersIcon, ChessPieceIcon, ChartNetwork } from "../../icons/DesignIcon";
+import type { MetricIcon } from "../../ui/Cards/MetricCard";
 
 interface BulletItem {
   icon: "layers" | "chessPiece" | "chartNetwork";
@@ -11,7 +12,7 @@ interface BulletItem {
 }
 
 interface MetricItem {
-  icon?: string;
+  icon?: MetricIcon; // 🔥 ESTE ES EL FIX REAL
   value: string;
   title: string;
   content?: string;

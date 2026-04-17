@@ -2,7 +2,7 @@ import { FlameIcon, UserIcon, DownloadIcon, TicketIcon } from "../../icons/Desig
 import styles from "./MetricCard.module.css";
 import type { ReactNode } from "react";
 
-type MetricIcon = "flame" | "user" | "download" | "ticket";
+export type MetricIcon = "flame" | "user" | "download" | "ticket";
 
 const iconMap: Record<MetricIcon, ReactNode> = {
   flame: <FlameIcon />,
