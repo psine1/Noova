@@ -52,7 +52,7 @@
         </div>
       </section>
 
-          <section className="text-center mb-16 bg-[var(--color-bg-main)] py-16">
+          <section className="text-center  bg-[var(--color-bg-main)] py-16">
             <h2
               className="font-semibold"
               style={{

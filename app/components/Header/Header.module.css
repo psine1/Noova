@@ -61,6 +61,7 @@
 .links {
   display: flex;
   gap: 28px;
+  font-family: var(--font-heading);
 }
 
 .links a {
@@ -112,10 +113,11 @@
   display: flex;
   flex-direction: column;
   gap: 28px;
+  font-family: var(--font-heading);
 }
 
 .mobileLinks a {
-  font-size: 28px;
+  font-size: var(--text-section);
   font-weight: 500;
   color: white;
   border-bottom: 1px solid rgba(255,255,255,0.1);

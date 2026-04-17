@@ -7,6 +7,8 @@
   background: transparent;
   background: var(--color-bg-main);
   transition: 0.3s;
+  font-weight: 700;
+  font-family: var(--font-heading);
 }
 
 .cta:hover {
