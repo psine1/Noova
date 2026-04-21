@@ -1,6 +1,6 @@
 import LandingHero from "../../components/sections/LandingHero/LandingHero";
 import Header from "../../components/Header/Header";
-import GridCards from "../../components/sections/GridCards/GridCards";
+import GridCards, { portfolioItems } from "../../components/sections/GridCards/GridCards";
 import Footer from "../../components/Footer/Footer";
 
 
@@ -12,7 +12,7 @@ export default function EcommercePage() {
     <Header />   
     <main className=" ">
       <LandingHero {...ecommerceData.hero} />
-      <GridCards data={ecommerceData.metrics} />
+      <GridCards items={portfolioItems} />
 
       
     </main>
