@@ -1,8 +1,11 @@
-import { cases } from "./data/cases";
+import { cases, data } from "./data/cases";
 
 import BannerPreview from "../../../components/BannerPreview/BannerPreview";
 import CaseInfo from "../../../components/CaseInfo/CaseInfo";
 import CaseNavigation from "../../../components/CaseNavigation/CaseNavigation";
+import LandingHero from "../../../components/sections/LandingHero/LandingHero";
+import Footer from "../../../components/Footer/Footer";
+import Header from "../../../components/Header/Header";
 
 import styles from "./page.module.css";
 
@@ -26,24 +29,43 @@ export default async function CasePage({
   const prev = cases[index - 1] || null;
   const next = cases[index + 1] || null;
 
+
   return (
-    <section className={styles.section}>
-      <div className={styles.container}>
+    <>
+      <Header />
 
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-4 items-start">
+      <main>
+        <LandingHero {...data.hero} />
 
-          <CaseInfo
-            solution={caseItem.solution}
-            stack={caseItem.stack}
-          />
+        <section className={styles.section}>
+          <div className={styles.container}>
 
-          <BannerPreview sizes={caseItem.sizes} />
+            {/* TOP GRID */}
+              <div className="flex gap-3 flex-wrap items-center justify-around mb-8">
 
-        </div>
+              {/* LEFT */}
+              <div className="lg:col-span-1">
+                <CaseInfo
+                  solution={caseItem.solution}
+                  stack={caseItem.stack}
+                />
+              </div>
 
-        <CaseNavigation prev={prev} next={next} />
+              {/* RIGHT */}
+              <div className="lg:col-span-2">
+                <BannerPreview sizes={caseItem.sizes} />
+              </div>
 
-      </div>
-    </section>
+            </div>
+
+            {/* NAV */}
+            <CaseNavigation prev={prev} next={next} />
+
+          </div>
+        </section>
+      </main>
+
+      <Footer />
+    </>
   );
 }

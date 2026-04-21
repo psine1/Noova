@@ -1,5 +1,19 @@
 // data/cases.ts
 
+export const data = {
+  hero: {
+    label: "Banner Production",
+    title: "HTML5 ADS, Rich Media, and Playavke ADS",
+    description:
+      "Producimos piezas interactivas y sets de banners HTML5 de alta fidelidad para agencias y marcas globales. Cero fisuras, pixel-perfect.",
+    ctaText: "Ver casos",
+    backgroundColor: "#1B0C3B",   
+    backgroundImage: "/images/background-hero.png",
+  },
+};
+
+
+
 export const cases = [
   {
     slug: "universal-ads",
