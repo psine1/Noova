@@ -3,7 +3,7 @@
 import styles from "./Footer.module.css";
 import Link from "next/link";
 
- import { WspIcon, IgIcon, InIcon } from "../../icons/DesignIcon";
+ import { WspIcon, IgIcon, InIcon } from "../icons/DesignIcon";
 
 export default function Footer() {
   return (
@@ -14,7 +14,7 @@ export default function Footer() {
         <div className="flex justify-center items-center space-around gap-24">
             {/* LEFT */}
             <div className={styles.left}>
-            <img src="images/logo_noova_dark.svg" alt="Noova Logo" />
+            <img src="/images/logo_noova_dark.svg" alt="Noova Logo" />
             </div>
 
             {/* CENTER */}

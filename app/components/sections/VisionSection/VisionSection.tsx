@@ -5,7 +5,7 @@ import Button from "../../ui/Button/Button";
 export default function VisionSection() {
   return (
     <>
-        <section className="w-[90%] m-auto text-center mb-16 bg-[var(--color-bg-section)] py-16">
+        <section className="w-[90%] m-auto text-center mb-16 bg-[var(--color-bg-section)] py-12">
           <h2
             className="font-semibold"
             style={{

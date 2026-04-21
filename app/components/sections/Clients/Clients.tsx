@@ -22,7 +22,7 @@ export const clientsItems = [
 
 export default function Clients() {
   return (
-    <section className="py-24 bg-[var(--color-bg-section)]">
+    <section className="py-12 bg-[var(--color-bg-section)]">
       <div className="w-[90%] max-w-[1200px] mx-auto">
 
         {/* Header */}

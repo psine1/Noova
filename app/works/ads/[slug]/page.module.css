@@ -1,0 +1,12 @@
+.section {
+    padding: 0px 0px 40px 0px ;
+    background: #050505;
+}
+
+/* layout */
+.container {
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+
+}

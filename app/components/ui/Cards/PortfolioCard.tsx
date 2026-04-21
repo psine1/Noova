@@ -2,9 +2,10 @@ import styles from "./PortfolioCard.module.css";
 
 type Props = {
   image: string;
-  logo: string;
+  logo?: string;
   title: string;
   description: string;
+  variant?: "default" | "compact";
 };
 
 export default function PortfolioCard({
@@ -12,15 +13,18 @@ export default function PortfolioCard({
   logo,
   title,
   description,
+  variant = "default",
 }: Props) {
   return (
-    <div className={styles.card}>
+    <div className={`${styles.card} ${styles[variant]}`}>
       
       {/* Background image */}
       <img src={image} alt="" className={styles.image} />
 
-      {/* Logo */}
-      <img src={logo} alt="" className={styles.logo} />
+      {/* Logo (condicional) */}
+      {logo && (
+        <img src={logo} alt="" className={styles.logo} />
+      )}
 
       {/* Bottom box */}
       <div className={styles.info}>

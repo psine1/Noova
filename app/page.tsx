@@ -5,7 +5,7 @@ import Header from "./components/Header/Header";
 import Portfolio from "./components/sections/Portfolio/Portfolio";
 import Clients from "./components/sections/Clients/Clients";
 import VisionSection from "./components/sections/VisionSection/VisionSection";
-import Footer from "./components/sections/Footer/Footer";
+import Footer from "./components/Footer/Footer";
 
 
 export default function Home() {

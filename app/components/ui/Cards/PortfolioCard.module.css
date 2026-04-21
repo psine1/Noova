@@ -5,6 +5,11 @@
   cursor: pointer;
 }
 
+/*  Variante compacta */
+.compact {
+  height: 362px;
+}
+
 /* IMAGE */
 .image {
   width: 100%;
@@ -49,6 +54,23 @@
   font-size: var(--text-body);
   padding-right: 5rem;
 }
+
+
+/* Ajustes específicos compact */
+.compact .info {
+  padding: 16px;
+}
+
+.compact h3 {
+  font-size: 18px;
+}
+
+.compact p {
+  font-size: 14px;
+}
+
+
+
 
 /* HOVER EFFECT 🔥 */
 .card:hover .info {
