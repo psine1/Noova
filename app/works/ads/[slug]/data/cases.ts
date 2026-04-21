@@ -44,29 +44,6 @@ export const cases = [
   },
 
   {
-    slug: "sertal-ads",
-    title: "Sertal - RichMedia Ads",
-
-    sizes: [
-      {
-        label: "300x600",
-        width: 300,
-        height: 600,
-        src: "https://psine1.github.io/demo-ads/300x600-Sertal/",
-      },
-    
-    ],
-
-    solution: [
-      "Animaciones de alta calidad con GSAP",
-      "Elementos interactivos hover",
-      "Cargas progresivas optimizadas",
-    ],
-
-    stack: ["HTML5", "GSAP 3.x", "DoubleClick"],
-  },  
-
-  {
     slug: "lego-ads",
     title: "Lego - Banners Ads 300",
 
@@ -88,6 +65,29 @@ export const cases = [
     solution: ["Motion graphics de alta fidelidad"],
     stack: ["HTML5", "Canvas"],
   },
+
+  {
+    slug: "sertal-ads",
+    title: "Sertal - RichMedia Ads",
+
+    sizes: [
+      {
+        label: "300x600",
+        width: 300,
+        height: 600,
+        src: "https://psine1.github.io/demo-ads/300x600-Sertal/",
+      },
+    
+    ],
+
+    solution: [
+      "Animaciones de alta calidad con GSAP",
+      "Elementos interactivos hover",
+      "Cargas progresivas optimizadas",
+    ],
+
+    stack: ["HTML5", "GSAP 3.x", "DoubleClick"],
+  },    
 
   {
     slug: "goojitzu-ads",
