@@ -4,14 +4,14 @@ import GridCards, { portfolioItems } from "../../components/sections/GridCards/G
 import Footer from "../../components/Footer/Footer";
 
 
-import { ecommerceData } from "./data";
+import { bannerProduction } from "./data";
 
 export default function EcommercePage() {
   return (
     <>
     <Header />   
     <main className=" ">
-      <LandingHero {...ecommerceData.hero} />
+      <LandingHero {...bannerProduction.hero} />
       <GridCards items={portfolioItems} />
 
       

@@ -1,6 +1,6 @@
 
 
-export const ecommerceData = {
+export const bannerProduction = {
   hero: {
     label: "Banner Production",
     title: "HTML5 ADS, Rich Media, and Playavke ADS",

@@ -102,10 +102,10 @@ export default function GridCards({ items = portfolioItems }: Props) {
         <div className="grid py-12 md:grid-cols-3 gap-6">
           {items.map((item, index) => (
             <Link
-  key={index}
-  href={`/works/ads/${item.slug}`}
-  className="block hover:scale-[1.02] transition-transform"
->
+            key={index}
+            href={`/works/ads/${item.slug}`}
+            className="block hover:scale-[1.02] transition-transform"
+          >
               <PortfolioCard {...item} />
             </Link>
           ))}

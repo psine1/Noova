@@ -1,7 +1,9 @@
 import { DiamondIcon, RocketIcon, PhysicsIcon } from "../../icons/DesignIcon";
 import PortfolioCard from "../../ui/Cards/PortfolioCard";
+import Link from "next/link";
 
 type PortfolioItem = {
+  slug: string; 
   image: string;
   logo?: string;
   title: string;
@@ -11,6 +13,7 @@ type PortfolioItem = {
 
 export const portfolioItems: PortfolioItem[] = [
   {
+      slug: "/works/case-studies/tricks",
       image: "/images/tricks.jpg",
       logo: "/images/tricks.svg",
       title: "Tricks Studio",
@@ -18,6 +21,7 @@ export const portfolioItems: PortfolioItem[] = [
       variant: "default", 
   },
   {
+      slug: "/works/case-studies/tienda-digital",
       image: "/images/tienda.jpg",
       logo: "/images/tricks.svg",
       title: "Tienda Digital",
@@ -25,6 +29,7 @@ export const portfolioItems: PortfolioItem[] = [
       variant: "default", 
   },
   {
+      slug: "/works/ads", 
       image: "/images/universal.jpg",
       logo: "/images/tricks.svg",
       title: "Universal Orlando Resoty",
@@ -36,7 +41,7 @@ export const portfolioItems: PortfolioItem[] = [
 
 export default function Portfolio() {
   return (
-    <section className="py-12 bg-[var(--color-bg-section)]">
+    <section id="portfolio" className="py-12 bg-[var(--color-bg-section)]">
       <div className="w-[90%] max-w-[1200px] mx-auto">
 
         {/* Header */}
@@ -66,7 +71,13 @@ export default function Portfolio() {
         <div className="grid md:grid-cols-3 gap-6">
 
           {portfolioItems.map((item, index) => (
+            <Link
+            key={index}
+            href={`${item.slug}`}
+            className="block hover:scale-[1.02] transition-transform"
+          >
             <PortfolioCard key={index} {...item} />
+            </Link>            
           ))}
 
         </div>

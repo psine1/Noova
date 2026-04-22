@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import styles from "./Header.module.css";
 import Button from "../ui/Button/Button";
 
@@ -14,18 +15,22 @@ export default function Header() {
 
           {/* Logo */}
           <div className={styles.logo}>
-            <img src="/images/logo_noova.svg" alt="Noova Logo" />
+            <Link href="/">
+              <img src="/images/logo_noova.svg" alt="Noova Logo" />
+            </Link>
           </div>
 
           {/* Desktop */}
           <div className={styles.desktop}>
             <nav className={styles.links}>
-              <a href="#">Servicios</a>
-              <a href="#">Portfolio</a>
-              <a href="#">Nosotros</a>
+              <Link href="/#servicios">Servicios</Link>
+              <Link href="/#portfolio">Portfolio</Link>
+              <Link href="/#nosotros">Nosotros</Link>
             </nav>
 
-            <Button>Iniciar proyecto</Button>
+            <Link href="/#contacto">
+              <Button>Iniciar proyecto</Button>
+            </Link>
           </div>
 
           {/* Mobile hamburger */}
@@ -46,12 +51,12 @@ export default function Header() {
           </div>
 
           <div className={styles.mobileLinks}>
-            <a>Soluciones</a>
-            <a>Servicios de marketing</a>
-            <a>Servicios tecnológicos</a>
-            <a>Nuestro trabajo</a>
-            <a>Sobre nosotros</a>
-            <a>Contacto</a>
+            <Link href="/#soluciones" onClick={() => setOpen(false)}>Soluciones</Link>
+            <Link href="/#marketing" onClick={() => setOpen(false)}>Servicios de marketing</Link>
+            <Link href="/#tecnologia" onClick={() => setOpen(false)}>Servicios tecnológicos</Link>
+            <Link href="/#portfolio" onClick={() => setOpen(false)}>Nuestro trabajo</Link>
+            <Link href="/#nosotros" onClick={() => setOpen(false)}>Sobre nosotros</Link>
+            <Link href="/#contacto" onClick={() => setOpen(false)}>Contacto</Link>
           </div>
 
         </div>

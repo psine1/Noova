@@ -29,7 +29,7 @@
 .main img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
 }
 
 .MediaShowcase-module__main img {

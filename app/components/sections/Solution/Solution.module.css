@@ -39,7 +39,7 @@
 
 
 .label { 
-  color: var(--font-white);
+  color: var(--color-white);
   font-size: var(--title-card);
   font-family: var(--font-heading);
 }

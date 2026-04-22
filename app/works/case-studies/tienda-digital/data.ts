@@ -1,6 +1,6 @@
 
 
-export const ecommerceData = {
+export const tiendaDigitalData = {
   hero: {
     label: "e-commerce & brand ",
     title: "TIENDA DIGITAL",
@@ -77,26 +77,26 @@ solution: {
     {
       icon: "flame" as const,
       value: "",
-      title: "Enfoque en Publishers:",
-      content: "Navegación directa para que inversores auditen servicios con rapidez."
+      title: "Arquitectura de Venta:",
+      content: "Flujos de navegación optimizados para reducir el abandono de carrito."
     },
     {
       icon: "user" as const,
       value: "",
-      title: "SaExperiencia Inmersiva:",
-      content: "Animaciones HTML5 fluidas que prueban la calidad técnica al instante."      
+      title: "Diseño de Confianza:",
+      content: "Estética premium que eleva el valor percibido de los productos."      
     },
     {
       icon: "download" as const,
       value: "",
-      title: "Hub de Reclutamiento:",
-      content: "Sistema de postulación ágil que refleja la cultura y atrae al talento."      
+      title: "Panel de Control Simple:",
+      content: "Gestión autónoma de pedidos y clientes sin conocimientos técnicos."      
     },
     {
       icon: "ticket" as const,
       value: "",
-      title: "Desarrollo Escalable:",
-      content: "Código modular para actualizar la web y perfiles sin depender de terceros."      
+      title: "Integración Nativa:",
+      content: "Conexión directa con pagos y logística para escalar sin límites."      
     },
   ],
   
