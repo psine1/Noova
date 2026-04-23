@@ -96,9 +96,9 @@ export const cases = [
     sizes: [
       {
         label: "landscape",
-        width: 1280,
-        height: 720,
-        src: "https://psine1.github.io/demo-ads/GooJitZu_GootronSupreme%20-%20v4/",
+        width: 800,
+        height: 450,
+        src: "https://psine1.github.io/demo-ads/goojitzu_ok/",
       },      
     ],
 

@@ -4,7 +4,7 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  z-index: 50;
+  z-index: 9999;
 }
 
 /* NAV CONTAINER */

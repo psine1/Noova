@@ -108,3 +108,75 @@ h1, h2, h3, h4 {
 #case-content {
   scroll-margin-top: 100px;
 }
+
+
+
+
+
+
+
+
+
+#transition-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+/* panel base */
+.panel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0%;
+}
+
+/* colores */
+.panel-black {
+  background: #050505;
+  z-index: 1;
+}
+
+.panel-green {
+  background: #4AFF96;
+  z-index: 2;
+}
+
+
+
+#transition-overlay {
+  will-change: transform, opacity;
+}
+
+/* animación */
+#transition-overlay.active .panel-black {
+  animation: slideIn 0.4s ease forwards;
+}
+
+#transition-overlay.active .panel-green {
+  animation: slideIn 0.4s ease forwards;
+  animation-delay: 0.1s;
+}
+
+/* salida */
+#transition-overlay.exit .panel-green {
+  animation: slideOut 0.4s ease forwards;
+}
+
+#transition-overlay.exit .panel-black {
+  animation: slideOut 0.4s ease forwards;
+  animation-delay: 0.1s;
+}
+
+/* keyframes */
+@keyframes slideIn {
+  from { width: 0%; }
+  to { width: 100%; }
+}
+
+@keyframes slideOut {
+  from { width: 100%; }
+  to { width: 0%; }
+}

@@ -5,11 +5,18 @@ import Link from "next/link";
 import styles from "./Header.module.css";
 import Button from "../ui/Button/Button";
 
+
 export default function Header() {
   const [open, setOpen] = useState(false);
 
   return (
     <>
+     
+        <div id="transition-overlay">
+          <div className="panel panel-black" />
+          <div className="panel panel-green" />
+        </div>
+
       <header className={styles.wrapper}>
         <div className={styles.nav}>
 
