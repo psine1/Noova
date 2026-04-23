@@ -16,7 +16,7 @@ export default function CaseNavigation({ prev, next }: Props) {
 
       {/* PREV */}
       {prev ? (
-        <Link href={`/works/ads/${prev.slug}`}>
+        <Link href={`/works/ads/${prev.slug}#case-content`}>
           <div className="p-6 rounded-xl bg-[#111] border border-[#222] hover:border-green-500 transition cursor-pointer">
             <span className="text-sm text-gray-500">← ANTERIOR</span>
             <p className="text-white mt-2 font-medium">
@@ -30,7 +30,7 @@ export default function CaseNavigation({ prev, next }: Props) {
 
       {/* NEXT */}
       {next ? (
-        <Link href={`/works/ads/${next.slug}`}>
+        <Link href={`/works/ads/${next.slug}#case-content`}>
           <div className="p-6 rounded-xl bg-[#111] border border-[#222] hover:border-green-500 transition cursor-pointer text-right">
             <span className="text-sm text-gray-500">SIGUIENTE →</span>
             <p className="text-white mt-2 font-medium">

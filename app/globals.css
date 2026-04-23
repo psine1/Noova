@@ -43,6 +43,10 @@
 }
 
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* Base */
 body {
   font-family: var(--font-body);
@@ -95,4 +99,12 @@ h1, h2, h3, h4 {
 
 .text-muted {
   color: rgba(255,255,255,0.6);
+}
+
+#servicios,
+#portfolio,
+#nosotros,
+#contacto,
+#case-content {
+  scroll-margin-top: 100px;
 }

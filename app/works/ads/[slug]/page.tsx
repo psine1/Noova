@@ -37,7 +37,7 @@ export default async function CasePage({
       <main>
         <LandingHero {...data.hero} />
 
-        <section className={styles.section}>
+        <section id="case-content" className={styles.section}>
           <div className={styles.container}>
 
             {/* TOP GRID */}
