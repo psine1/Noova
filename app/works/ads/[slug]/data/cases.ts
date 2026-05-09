@@ -162,7 +162,7 @@ export const cases = [
         width: 300,
         height: 600,
         src: "https://psine1.github.io/demo-ads/300x600-residentEvil-requiem/",
-      },      
+      },            
     ],
 
     solution: ["Motion graphics de alta fidelidad"],
@@ -237,6 +237,8 @@ export const cases = [
 
     solution: ["Motion graphics de alta fidelidad"],
     stack: ["HTML5", "Canvas"],
-  },      
+  }, 
+  
+  
 
 ];

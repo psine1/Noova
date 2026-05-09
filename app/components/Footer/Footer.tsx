@@ -19,10 +19,10 @@ export default function Footer() {
 
             {/* CENTER */}
             <nav className={styles.nav}>
-            <Link href="#">Home</Link>
-            <Link href="#">Servicios</Link>
-            <Link href="#">Portfolio</Link>
-            <Link href="#">Contacto</Link>
+            <Link href="/">Home</Link>
+            <Link href="/#servicios">Servicios</Link>
+            <Link href="/#portfolio">Portfolio</Link>
+            <Link href="/contacto">Contacto</Link>
             </nav>
         </div>
 

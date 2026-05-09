@@ -35,7 +35,7 @@ export default function Header() {
               <Link href="/#nosotros">Nosotros</Link>
             </nav>
 
-            <Link href="/#contacto">
+            <Link href="/contacto">
               <Button>Iniciar proyecto</Button>
             </Link>
           </div>
@@ -63,7 +63,7 @@ export default function Header() {
             <Link href="/#tecnologia" onClick={() => setOpen(false)}>Servicios tecnológicos</Link>
             <Link href="/#portfolio" onClick={() => setOpen(false)}>Nuestro trabajo</Link>
             <Link href="/#nosotros" onClick={() => setOpen(false)}>Sobre nosotros</Link>
-            <Link href="/#contacto" onClick={() => setOpen(false)}>Contacto</Link>
+            <Link href="/contacto" onClick={() => setOpen(false)}>Contacto</Link>
           </div>
 
         </div>
