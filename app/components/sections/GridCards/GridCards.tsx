@@ -1,4 +1,3 @@
-import { DiamondIcon, RocketIcon, PhysicsIcon } from "../../icons/DesignIcon";
 import PortfolioCard from "../../ui/Cards/PortfolioCard";
 import styles from "./GridCards.module.css";
 import Link from "next/link";
@@ -9,6 +8,7 @@ type PortfolioItem = {
   logo?: string;
   title: string;
   description: string;
+  alt: string;
   variant?: "compact" | "default";
 };
 
@@ -24,6 +24,7 @@ export const portfolioItems: PortfolioItem[] = [
       image: "/images/ads_thumb/orlando.png",
       logo: "/images/tricks.svg",
       title: "Universal - RichMedia Ads",
+      alt: "Universal RichMedia Ads producido por NOOVA",
       description: "Experiencia inmersiva con lógicas de interacción y video.",
       variant: "compact", 
   },
@@ -32,6 +33,7 @@ export const portfolioItems: PortfolioItem[] = [
       image: "/images/ads_thumb/lego_f1.jpg",
       logo: "/images/ads_thumb/logo_lego_f1.png",
       title: "Lego - Banners Ads 360",
+      alt: "Lego Banners Ads 360 producido por NOOVA",
       description: "Campaña global con escalado a múltiples formatos HTML5.",
       variant: "compact", 
   },
@@ -40,6 +42,7 @@ export const portfolioItems: PortfolioItem[] = [
       image: "/images/ads_thumb/sertal.png",
       logo: "/images/tricks.svg",
       title: "Sertal - Banners Ads 360",
+      alt: "Sertal Banners Ads 360 producido por NOOVA",
       description: "Producción de alto volumen con optimización de peso.",
       variant: "compact", 
   },
@@ -48,6 +51,7 @@ export const portfolioItems: PortfolioItem[] = [
       image: "/images/ads_thumb/goojitzu.jpg",
       logo: "/images/ads_thumb/logo_goojitzu.png",
       title: "Goo Jit zu - Playable Ads",
+      alt: "Goo Jit zu Playable Ads producido por NOOVA",
       description: "Playable Ads con motion graphics de alta fidelidad.",
       variant: "compact", 
   },
@@ -56,6 +60,7 @@ export const portfolioItems: PortfolioItem[] = [
       image: "/images/ads_thumb/wonder.png",
       logo: "/images/tricks.svg",
       title: "Sertal - Wonder - Banners Ads",
+      alt: "Wonder Banners Ads producido por NOOVA",
       description: "Producción de alto volumen con optimización de peso.",
       variant: "compact", 
   },
@@ -64,6 +69,7 @@ export const portfolioItems: PortfolioItem[] = [
       image: "/images/ads_thumb/botleo.png",
       logo: "/images/tricks.svg",
       title: "Botle' O - Banners Ads 360",
+      alt: "Botle O Banners Ads 360 producido por NOOVA",
       description: "Playable Ads con motion graphics de alta fidelidad.",
       variant: "compact", 
   },   
@@ -72,6 +78,7 @@ export const portfolioItems: PortfolioItem[] = [
       image: "/images/ads_thumb/resident_evil.jpg",
       logo: "/images/ads_thumb/residentEvil.png",
       title: "Resident Evil - Banners Ads ",
+      alt: "Resident Evil Banners Ads producido por NOOVA",
       description: "Formatos de alto impacto con estética pixel-perfect.",
       variant: "compact", 
   },
@@ -80,6 +87,7 @@ export const portfolioItems: PortfolioItem[] = [
       image: "/images/ads_thumb/venture_country.png",
       logo: "/images/tricks.svg",
       title: "Ventura - Banners Ads 360",
+      alt: "Ventura Banners Ads 360 producido por NOOVA",
       description: "Ejecución técnica de piezas para pauta programática.",
       variant: "compact", 
   },
@@ -88,6 +96,7 @@ export const portfolioItems: PortfolioItem[] = [
       image: "/images/ads_thumb/cars.png",
       logo: "/images/tricks.svg",
       title: "NHTSA - Banners Ads 360",
+      alt: "NHTSA Banners Ads 360 producido por NOOVA",
       description: "Despliegue de formatos Ads 360 con lineamientos estrictos.",
       variant: "compact", 
   },         

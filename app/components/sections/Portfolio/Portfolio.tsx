@@ -1,4 +1,3 @@
-import { DiamondIcon, RocketIcon, PhysicsIcon } from "../../icons/DesignIcon";
 import PortfolioCard from "../../ui/Cards/PortfolioCard";
 import Link from "next/link";
 
