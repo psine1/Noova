@@ -1,4 +1,6 @@
 import { ReactNode } from "react";
+import Button from "../Button/Button";
+import styles from "./ExpertiseCard.module.css";
 
 type Props = {
   icon?: ReactNode;
@@ -15,7 +17,7 @@ export default function ExpertiseCard({
 }: Props) {
   return (
     <div
-      className={`p-6 rounded-xl border border-black/10 bg-white shadow-sm hover:shadow-md hover:bg-[#4AFF96] transition ${className || ""}`}
+      className={`${styles.card} p-6 rounded-xl border border-black/10 bg-white shadow-sm hover:shadow-md hover:bg-[#4AFF96] transition ${className || ""}`}
     >
       {/* ICON */}
       {icon && (
@@ -48,6 +50,12 @@ export default function ExpertiseCard({
       >
         {description}
       </p>
+
+      <div className={styles.actionWrap}>
+        <Button href="/contacto" className={styles.serviceButton}>
+          Consultar servicio
+        </Button>
+      </div>
     </div>
   );
 }

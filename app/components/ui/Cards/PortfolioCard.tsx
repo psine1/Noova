@@ -5,6 +5,7 @@ type Props = {
   logo?: string;
   title: string;
   description: string;
+  alt: string;
   variant?: "default" | "compact";
 };
 
@@ -13,6 +14,7 @@ export default function PortfolioCard({
   logo,
   title,
   description,
+  alt,
   variant = "default",
 }: Props) {
   return (
@@ -23,7 +25,7 @@ export default function PortfolioCard({
 
       {/* Logo (condicional) */}
       {logo && (
-        <img src={logo} alt="" className={styles.logo} />
+        <img src={logo} alt={alt} className={styles.logo} />
       )}
 
       {/* Bottom box */}

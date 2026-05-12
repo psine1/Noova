@@ -29,9 +29,9 @@ export default function Footer() {
         {/* RIGHT */}
         <div className={styles.social}>
          
-          <a href="#"><WspIcon /></a>
-          <a href="#"><IgIcon /></a>
-          <a href="#"><InIcon /></a>
+          <a href="https://api.whatsapp.com/send?phone=542612593497" target="_blank"><WspIcon /></a>
+          {/* <a href="#"><IgIcon /></a> */}
+          <a href="https://www.linkedin.com/company/noova-arg/" target="_blank"><InIcon /></a>
           
         </div>
 
