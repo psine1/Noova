@@ -24,7 +24,7 @@ export default function HeroIntro() {
         ? new SplitText(titleRef.current, { type: "words" })
         : null;
       const split = textRef.current
-        ? new SplitText(textRef.current, { type: "words" })
+        ? new SplitText(textRef.current, { type: "lines" })
         : null;
 
       gsap.set(frameRef.current, {
@@ -33,7 +33,7 @@ export default function HeroIntro() {
         "--frame-blur-opacity": 0,
       });
       gsap.set(titleSplit?.words ?? [], { autoAlpha: 0, y: 18 });
-      gsap.set(split?.words ?? [], { autoAlpha: 0, y: 16 });
+      gsap.set(split?.lines ?? [], { autoAlpha: 0, y: 16 });
       gsap.set(buttonRef.current, { autoAlpha: 0, y: 14 });
 
       const timeline = gsap.timeline({
@@ -60,11 +60,11 @@ export default function HeroIntro() {
           duration: 0.6,
           stagger: 0.055,
         }, "<")
-        .to(split?.words ?? [], {
+        .to(split?.lines ?? [], {
           autoAlpha: 1,
           y: 0,
-          duration: 0.55,
-          stagger: 0.035,
+          duration: 0.65,
+          stagger: 0.08,
         }, "-=0.35")
         .to(buttonRef.current, {
           autoAlpha: 1,

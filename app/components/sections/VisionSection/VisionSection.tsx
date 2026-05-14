@@ -26,7 +26,7 @@ export default function VisionSection() {
           >
             Hablemos sobre cómo podemos concretarlo.
           </p>
-          <Button >Iniciar consulta</Button>
+          <Button href="/contacto">Iniciar consulta</Button>
 
         </section> 
 
