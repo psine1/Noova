@@ -29,7 +29,7 @@ export default function HeroIntro() {
 
       gsap.set(frameRef.current, {
         autoAlpha: 0,
-        y: 18, scale: 1.5,
+        scale: 2, rotation: 0.05,
         "--frame-blur-opacity": 0,
       });
       gsap.set(titleSplit?.words ?? [], { autoAlpha: 0, y: 18 });
@@ -40,16 +40,14 @@ export default function HeroIntro() {
         defaults: { ease: "power3.out" },
       });
 
+      timeline.to(frameRef.current, {
+        autoAlpha: 1,
+        scale: 1,
+        "--frame-blur-opacity": 1,
+        duration: 0.8,
+      });
+
       timeline
-        .to(frameRef.current, {
-          autoAlpha: 1,
-          y: 0, scale: 1,
-          duration: 0.75,
-        })
-        .to(frameRef.current, {
-          "--frame-blur-opacity": 1,
-          duration: 0.9,
-        }, "<")
         .fromTo(titleRef.current, {
           autoAlpha: 0,
         }, {

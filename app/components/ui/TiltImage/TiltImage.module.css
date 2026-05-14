@@ -4,13 +4,41 @@
 
 .imageWrap {
   position: relative;
+  overflow: hidden;
   transform-style: preserve-3d;
   will-change: transform;
 }
 
 .imageWrap img {
   display: block;
-  transform: translateZ(18px);
+  position: relative;
+  z-index: 0;
+  transform: translateZ(18px) scale(1);
+  transition: transform 0.75s cubic-bezier(0.22, 1, 0.36, 1), filter 0.75s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform, filter;
+}
+
+.imageWrap::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0;
+  background:
+    radial-gradient(circle at 50% 35%, rgba(74, 255, 150, 0.2), transparent 48%),
+    linear-gradient(135deg, rgba(74, 255, 150, 0.12), transparent 52%);
+  mix-blend-mode: soft-light;
+  transition: opacity 0.55s ease;
+}
+
+.imageWrap:hover img {
+  filter: saturate(1.08) contrast(1.04) brightness(1.03);
+  transform: translateZ(24px) scale(1.045);
+}
+
+.imageWrap:hover::after {
+  opacity: 1;
 }
 
 .glare {
@@ -27,6 +55,12 @@
     transform: none !important;
   }
 
+  .imageWrap img {
+    filter: none;
+    transform: none;
+  }
+
+  .imageWrap::after,
   .glare {
     display: none;
   }
