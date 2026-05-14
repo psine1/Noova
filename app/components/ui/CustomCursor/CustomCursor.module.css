@@ -1,0 +1,75 @@
+.cursor {
+  --cursor-size-dot: 14px;
+  --cursor-size-ring: 60px;
+  --cursor-ring-opacity: 1;
+  --cursor-glow-opacity: 1;
+
+  pointer-events: none;
+}
+
+.dot,
+.ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2147483647;
+  pointer-events: none;
+  opacity: 0;
+  will-change: transform, width, height, opacity;
+  mix-blend-mode: difference;
+}
+
+.dot {
+  width: var(--cursor-size-dot);
+  height: var(--cursor-size-dot);
+  border-radius: 999px;
+  background: #fff;
+
+  filter: saturate(1.18) contrast(1.08);
+  transition: width 0.22s ease, height 0.22s ease, opacity 0.22s ease, box-shadow 0.22s ease;
+}
+
+.ring {
+  width: var(--cursor-size-ring);
+  height: var(--cursor-size-ring);
+  border: 1.5px solid #fff;
+  border-radius: 999px;
+  filter: saturate(1.15) contrast(1.05);
+  transition: width 0.28s ease, height 0.28s ease, border-color 0.28s ease, box-shadow 0.28s ease;
+  
+}
+
+.cursor[data-visible="true"] .dot,
+.cursor[data-visible="true"] .ring {
+  opacity: 1;
+}
+
+.active {
+  --cursor-size-dot: 14px;
+  --cursor-size-ring: 52px;
+  --cursor-ring-opacity: 1;
+  --cursor-glow-opacity: 0.42;
+}
+
+.active .dot {
+  box-shadow:
+    0 0 0 1px rgba(5, 5, 5, 0.42),
+    0 0 0 2px rgba(255, 255, 255, 0.14),
+    0 0 28px rgba(74, 255, 150, 0.72);
+}
+
+.pressed {
+  --cursor-size-dot: 11px;
+  --cursor-size-ring: 44px;
+} 
+
+:global(html.has-custom-cursor),
+:global(html.has-custom-cursor *) {
+  cursor: none !important;
+}
+
+@media (hover: none), (pointer: coarse) {
+  .cursor {
+    display: none;
+  }
+}

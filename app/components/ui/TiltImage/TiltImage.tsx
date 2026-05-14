@@ -71,6 +71,7 @@ export default function TiltImage({ src, alt = "", bg, className }: Props) {
         ref={imageRef}
         className={`${styles.imageWrap} ${className || ""}`}
         style={{ background: bg || "#0a0a0a" }}
+        data-cursor-hover
         onMouseMove={handleMouseMove}
         onMouseLeave={handleMouseLeave}
       >

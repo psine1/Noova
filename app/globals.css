@@ -47,6 +47,20 @@ html {
   scroll-behavior: smooth;
 }
 
+@media (hover: hover) and (pointer: fine) {
+  html.has-floating-scrollbar,
+  html.has-floating-scrollbar body {
+    scrollbar-width: none;
+  }
+
+  html.has-floating-scrollbar::-webkit-scrollbar,
+  html.has-floating-scrollbar body::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    display: none;
+  }
+}
+
 /* Base */
 body {
   font-family: var(--font-body);

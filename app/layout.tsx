@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Space_Grotesk } from "next/font/google";
+import CustomCursor from "./components/ui/CustomCursor/CustomCursor";
+import FloatingScrollbar from "./components/ui/FloatingScrollbar/FloatingScrollbar";
 
 import "./globals.css";
 
@@ -28,9 +30,11 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${spaceGrotesk.variable}`}
+      className={`${inter.variable} ${spaceGrotesk.variable} has-floating-scrollbar`}
     >
       <body className="min-h-full flex flex-col"> 
+        <CustomCursor />
+        <FloatingScrollbar />
         {children}
         </body>
     </html>

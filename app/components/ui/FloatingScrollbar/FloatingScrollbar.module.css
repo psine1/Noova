@@ -1,0 +1,55 @@
+.track {
+  position: fixed;
+  top: 0;
+  right: 0px;
+  z-index: 9998;
+  width: 16px;
+  height: 0svh;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.22s ease;
+}
+
+.track[data-visible="true"],
+.track:hover {
+  opacity: 1;
+}
+
+.track[data-overflow="false"] {
+  display: none;
+}
+
+.thumb {
+  position: absolute;
+  top: 0;
+  right: 4px;
+  width: 5px;
+  min-height: 48px;
+  border-radius: 999px;
+  background: var(--color-primary);
+  box-shadow:
+    0 0 0 1px rgba(5, 5, 5, 0.18),
+    0 0 16px rgba(74, 255, 150, 0.34);
+  cursor: grab;
+  pointer-events: auto;
+  transition: width 0.2s ease, box-shadow 0.2s ease;
+  will-change: transform, height;
+}
+
+.thumb:hover {
+  width: 6px;
+  box-shadow:
+    0 0 0 1px rgba(5, 5, 5, 0.22),
+    0 0 22px rgba(74, 255, 150, 0.48);
+}
+
+:global(body.is-dragging-scrollbar) .thumb {
+  cursor: grabbing;
+  width: 6px;
+}
+
+@media (hover: none), (pointer: coarse) {
+  .track {
+    display: none;
+  }
+}
