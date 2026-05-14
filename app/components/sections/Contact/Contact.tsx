@@ -1,6 +1,13 @@
+"use client";
+
+import { useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { SplitText } from "gsap/SplitText";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./Contact.module.css";
+
+gsap.registerPlugin(SplitText);
 
 function LocationIcon() {
   return (
@@ -21,6 +28,79 @@ function MailIcon() {
 }
 
 export default function Contact() {
+  const copyRef = useRef<HTMLDivElement>(null);
+  const titleRef = useRef<HTMLHeadingElement>(null);
+  const paragraphRef = useRef<HTMLParagraphElement>(null);
+  const formRef = useRef<HTMLFormElement>(null);
+  const iconMapRef = useRef<HTMLAnchorElement>(null);
+  const iconMailRef = useRef<HTMLAnchorElement>(null);
+
+  useEffect(() => {
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    if (reducedMotion) return;
+
+    const context = gsap.context(() => {
+      const titleSplit = titleRef.current
+        ? new SplitText(titleRef.current, { type: "words" })
+        : null;
+      const paragraphSplit = paragraphRef.current
+        ? new SplitText(paragraphRef.current, { type: "lines" })
+        : null;
+
+
+      gsap.set(titleSplit?.words ?? [], { autoAlpha: 0, y: 18 });
+      gsap.set(paragraphSplit?.lines ?? [], { autoAlpha: 0, y: 16 });
+      gsap.set(formRef.current, { scale: 1.3, autoAlpha: 0 });
+      gsap.set(iconMapRef.current, { x: 200, autoAlpha: 0 });
+      gsap.set(iconMailRef.current, { x: 200, autoAlpha: 0 });
+
+      const timeline = gsap.timeline({
+        defaults: { ease: "power3.out" },
+      });
+
+
+
+      timeline
+        .to(titleSplit?.words ?? [], {
+          autoAlpha: 1,
+          y: 0,
+          duration: 0.6,
+          stagger: 0.055,
+        }, "<")
+        .to(formRef.current, {
+          scale: 1,
+          autoAlpha: 1,
+          duration: 1,
+          x: 0,
+        }, "<")        
+        .to(paragraphSplit?.lines ?? [], {
+          autoAlpha: 1,
+          y: 0,
+          duration: 0.65,
+          stagger: 0.08,
+        }, "<+0.5")
+        .to(iconMapRef.current, {
+          x: 0,
+          autoAlpha: 1,
+          duration: 1,
+        }, "<+0.5")   
+        .to(iconMailRef.current, {
+          x: 0,
+          autoAlpha: 1,
+          duration: 1,
+        }, "<+0.2")                     
+        ;
+
+      return () => {
+        titleSplit?.revert();
+        paragraphSplit?.revert();
+      };
+    }, copyRef);
+
+    return () => context.revert();
+  }, []);
+
   return (
     <section id="contacto" className={styles.section}>
       <Link className={styles.close} href="/" aria-label="Volver al inicio">
@@ -28,23 +108,24 @@ export default function Contact() {
       </Link>
 
       <div className={styles.container}>
-        <div className={styles.copy}>
+        <div ref={copyRef} className={styles.copy}>
           <Image
-            className={styles.logo}
+            className={styles.logo} 
             src="/images/logo_noova_light.svg"
             alt="Noova"
             width={106}
             height={30}
           />
 
-          <h2>Hablemos de tu proximo producto.</h2>
-          <p>
+          <h2 ref={titleRef}>Hablemos de tu proximo producto.</h2>
+          <p ref={paragraphRef}>
             Estamos listos para aportar el criterio y la ejecucion que tu
             proyecto necesita para destacar.
           </p>
 
           <div className={styles.contactInfo}>
             <a
+              ref={iconMapRef}
               className={styles.infoItem}
               href="https://www.google.com/maps/search/?api=1&query=Mendoza%2C%20Argentina"
               target="_blank"
@@ -57,7 +138,7 @@ export default function Contact() {
               <span>Mendoza, Argentina.</span>
             </a>
 
-            <a className={styles.infoItem} href="mailto:hola@noova.com.ar">
+            <a ref={iconMailRef} className={styles.infoItem} href="mailto:hola@noova.com.ar">
               <span className={styles.iconBox}>
                 <MailIcon />
               </span>
@@ -66,7 +147,7 @@ export default function Contact() {
           </div>
         </div>
 
-        <form className={styles.form}>
+        <form ref={formRef} className={styles.form}>
           <h3>Contanos tu desafio</h3>
 
           <label className={styles.field}>
