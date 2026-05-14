@@ -1,6 +1,7 @@
 import styles from "./VisionSection.module.css";
 
 import Button from "../../ui/Button/Button";
+import HeroOrbitBackground from "../Hero/HeroOrbitBackground";
 
 export default function VisionSection() {
   return (
@@ -31,13 +32,15 @@ export default function VisionSection() {
 
 
         <section className={styles.hero}>
-        <div className={styles.frame}>
+          <HeroOrbitBackground />
+
+          <div className={styles.frame}>
             <div className={styles.content}>
-                <h2 className={styles.title}>
+              <h2 className={styles.title}>
                 “Aportamos claridad y criterio profesional a cada etapa del producto, asegurando que cada idea se transforme en una interfaz funcional y sólida.”
-                </h2>
+              </h2>
             </div>
-        </div>
+          </div>
         </section>
     </>
   );

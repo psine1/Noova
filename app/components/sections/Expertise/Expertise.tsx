@@ -1,5 +1,6 @@
 import { DiamondIcon, RocketIcon, PhysicsIcon } from "../../icons/DesignIcon";
 import ExpertiseCard from "../../ui/Cards/ExpertiseCard";
+import styles from "./Expertise.module.css";
 
 
 export const expertiseItems = [
@@ -54,7 +55,7 @@ export default function Expertise() {
         </div>
 
         {/* Cards */}
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className={`${styles.cardsGrid} grid md:grid-cols-3 gap-6`}>
 
           {expertiseItems.map((item, index) => (
             <ExpertiseCard

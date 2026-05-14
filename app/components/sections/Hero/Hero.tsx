@@ -1,10 +1,12 @@
 import styles from "./Hero.module.css";
 
 import Button from "../../ui/Button/Button";
+import HeroOrbitBackground from "./HeroOrbitBackground";
 
 export default function Hero() {
   return (
     <section className={styles.hero}>
+      <HeroOrbitBackground />
 
       <div className={styles.frame}> 
 

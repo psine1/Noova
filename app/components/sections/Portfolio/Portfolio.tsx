@@ -78,7 +78,7 @@ export default function Portfolio() {
             key={index}
             href={`${item.slug}`}
             scroll={true}
-            className="block hover:scale-[1.02] transition-transform"
+            className="block"
           >
             <PortfolioCard key={index} {...item} />
             </Link>            

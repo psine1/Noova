@@ -1,8 +1,16 @@
+.cardShell {
+  perspective: 1200px;
+}
+
 .card {
   position: relative;
   overflow: hidden;
   border-radius: 16px;
   cursor: pointer;
+  transform-style: preserve-3d;
+  transform: rotateX(0deg) rotateY(0deg);
+  will-change: transform;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.22);
 }
 
 /*  Variante compacta */
@@ -24,7 +32,8 @@
   top: 16px;
   right: 16px;
   height: 40px;
-  z-index: 2;
+  z-index: 3;
+  transform: translateZ(24px);
 }
 
 /* INFO BOX */
@@ -41,6 +50,17 @@
   color: #ffffff;
 
   transition: all 0.3s ease;
+  z-index: 3;
+  transform: translateZ(28px);
+}
+
+.glare {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  opacity: 0;
+  pointer-events: none;
+  mix-blend-mode: screen;
 }
 
 /* TEXT */
@@ -76,12 +96,6 @@
 .card:hover .info {
   background: rgba(255, 255, 255, 0.85);
   color: #000000; 
-}
-
-/* opcional: levantar card */
-.card:hover {
-  transform: translateY(-4px);
-  transition: 0.3s;
 }
 
 

@@ -1,5 +1,17 @@
-.cta:hover {
-  background: var(--color-primary);
-  color: black;
+.cardsGrid {
+  align-items: stretch;
 }
 
+.cardsGrid > * {
+  height: 100%;
+}
+
+.cardsGrid:has(> :hover),
+.cardsGrid:has(> :focus-within) {
+  align-items: flex-start;
+}
+
+.cardsGrid:has(> :hover) > *,
+.cardsGrid:has(> :focus-within) > * {
+  height: auto;
+}

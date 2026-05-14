@@ -1,20 +1,21 @@
 .hero {
-  
   background: #050505;
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
   position: relative;
+  overflow: hidden;
   padding: 60px 0px;
-    background-image: url("/images/background-hero.png");
-    background-size: cover;
+  background-image: url("/images/background-hero.png");
+  background-size: cover;
   background-position: center;
 }
 
 /* 🔥 ESTE ES EL MARCO */
 .frame {
   position: relative;
+  z-index: 1;
 
   width: 90%;
   max-width: 1200px;
@@ -65,6 +66,12 @@
   font-size: var(--text-main-heading);
   font-weight: 700;
   line-height: 1.2;  
+}
+
+@media (min-width: 768px) {
+  .hero {
+    background-image: none;
+  }
 }
 
 .content p {
