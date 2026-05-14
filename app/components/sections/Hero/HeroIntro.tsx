@@ -98,7 +98,7 @@ export default function HeroIntro() {
         </p>
 
         <div ref={buttonRef}>
-          <Button>Iniciar proyecto</Button>
+          <Button href="/contacto">Iniciar proyecto</Button>
         </div>
       </div>
     </div>

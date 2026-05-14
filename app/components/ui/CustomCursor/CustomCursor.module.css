@@ -45,22 +45,17 @@
 }
 
 .active {
-  --cursor-size-dot: 14px;
-  --cursor-size-ring: 52px;
+  --cursor-size-dot: 20px;
+  --cursor-size-ring: 130px;
   --cursor-ring-opacity: 1;
   --cursor-glow-opacity: 0.42;
 }
 
-.active .dot {
-  box-shadow:
-    0 0 0 1px rgba(5, 5, 5, 0.42),
-    0 0 0 2px rgba(255, 255, 255, 0.14),
-    0 0 28px rgba(74, 255, 150, 0.72);
-}
+
 
 .pressed {
   --cursor-size-dot: 11px;
-  --cursor-size-ring: 44px;
+  --cursor-size-ring: 20px;
 } 
 
 :global(html.has-custom-cursor),
