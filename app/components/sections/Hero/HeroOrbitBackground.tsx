@@ -70,7 +70,11 @@ export default function HeroOrbitBackground() {
 
         updateOrbits();
         gsap.ticker.add(updateOrbits);
-        removeOrbits = () => gsap.ticker.remove(updateOrbits);
+        removeOrbits = () => {
+          if (updateOrbits) {
+            gsap.ticker.remove(updateOrbits);
+          }
+        };
       }, scopeRef);
     }
 

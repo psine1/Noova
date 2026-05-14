@@ -1,6 +1,7 @@
 import { FlameIcon, UserIcon, DownloadIcon, TicketIcon } from "../../icons/DesignIcon";
 import styles from "./SolutionCard.module.css";
 import type { ReactNode } from "react";
+import TiltCard from "../TiltCard/TiltCard";
 
 export type SolutionIcon = "flame" | "user" | "download" | "ticket";
 
@@ -20,7 +21,7 @@ interface Props {
 
 export default function SolutionCard({ icon, value, title, content }: Props) {
   return (
-    <div className={styles.solutionCard}>
+    <TiltCard className={styles.solutionCard}>
       
       {icon && (
         <div
@@ -36,6 +37,6 @@ export default function SolutionCard({ icon, value, title, content }: Props) {
       <p className={styles.title}>{title}</p>
 
       {content && <p className={styles.content}>{content}</p>}
-    </div>
+    </TiltCard>
   );
 }

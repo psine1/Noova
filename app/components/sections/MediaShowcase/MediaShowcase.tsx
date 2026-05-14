@@ -1,5 +1,6 @@
   import styles from "./MediaShowcase.module.css";
   import Button from "../../ui/Button/Button";
+  import TiltImage from "../../ui/TiltImage/TiltImage";
 
   interface ImageItem {
     src: string;
@@ -27,24 +28,24 @@
           </div>
 
           {mainImage && (
-            <div
+            <TiltImage
+              src={mainImage.src}
+              alt=""
+              bg={mainImage.bg}
               className={styles.main}
-              style={{ background: mainImage.bg || "#0a0a0a" }}
-            >
-              <img src={mainImage.src} alt="" />
-            </div>
+            />
           )}
 
           {images && images.length > 1 && (
             <div className={styles.grid}>
               {images.slice(1).map((img, i) => (
-                <div
+                <TiltImage
                   key={i}
+                  src={img.src}
+                  alt=""
+                  bg={img.bg}
                   className={styles.card}
-                  style={{ background: img.bg || "#0a0a0a" }}
-                >
-                  <img src={img.src} alt="" />
-                </div>
+                />
               ))}
             </div>
           )}

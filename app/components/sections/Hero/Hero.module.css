@@ -43,24 +43,27 @@
 
 /* 🔥 ESTE ES EL MARCO */
 .frame {
+  --frame-blur-opacity: 1;
+
   position: relative;
   z-index: 1;
 
   width: 90%;
   max-width: 1200px;
+  margin: 0 auto;
   padding: 120px 40px;
   border-radius: 20px;
 
-  border: 1px solid rgba(34, 197, 94, 0.4);
+  border: 1px solid rgba(34, 197, 94, 0.18);
 
   /* 👉 glass effect */
-  background: rgba(0, 0, 0, 0.35);
+  background: rgba(0, 0, 0, calc(0.16 + (0.19 * var(--frame-blur-opacity))));
   backdrop-filter: blur(10px);
 
   box-shadow:
-    0 0 0 1px rgba(34, 197, 94, 0.2),
-    0 0 40px rgba(34, 197, 94, 0.25),
-    inset 0 0 20px rgba(34, 197, 94, 0.1);
+    0 0 0 1px rgba(34, 197, 94, calc(0.08 + (0.12 * var(--frame-blur-opacity)))),
+    0 0 40px rgba(34, 197, 94, calc(0.08 + (0.17 * var(--frame-blur-opacity)))),
+    inset 0 0 20px rgba(34, 197, 94, calc(0.03 + (0.07 * var(--frame-blur-opacity))));
 }
 
 /* glow */
@@ -78,17 +81,20 @@
   );
 
   filter: blur(20px);
-  opacity: 0.4;
+  opacity: calc(0.08 + (0.32 * var(--frame-blur-opacity)));
   z-index: -1;
 }
 
 /* Content */
 .content {
+  position: relative;
+  z-index: 3;
   text-align: center;
   margin: 0 auto;
 }
 
 .content h1 {
+  position: relative;
   max-width: 900px;
   margin: 0 auto 20px;  
   margin-bottom: 20px;
@@ -96,6 +102,18 @@
   font-size: var(--text-hero-heading);
   font-weight: 700;
   line-height: 1.2;  
+  overflow-wrap: anywhere;
+  text-wrap: balance;
+}
+
+.titleGhost {
+  visibility: hidden;
+}
+
+.titleAnimated {
+  position: absolute;
+  inset: 0;
+  display: block;
 }
 
 .content p {

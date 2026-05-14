@@ -1,5 +1,6 @@
 import styles from "./Solution.module.css";
 import SolutionCard, { type SolutionIcon } from "../../ui/Cards/SolutionCard";
+import TiltImage from "../../ui/TiltImage/TiltImage";
 
 
 interface ImageItem {
@@ -25,7 +26,7 @@ interface Props {
 export default function Solution({
   images,
   label,
-  title,
+  title, 
   content,
 }: Props) {
   const mainImage = images?.[0];
@@ -35,12 +36,12 @@ export default function Solution({
       <div className={styles.container}>
 
         {mainImage && (
-          <div
+          <TiltImage
+            src={mainImage.src}
+            alt=""
+            bg={mainImage.bg}
             className={styles.main}
-            style={{ background: mainImage.bg || "#0a0a0a" }}
-          >
-            <img src={mainImage.src} alt="" />
-          </div>
+          />
         )}
 
         <div className={styles.left}>

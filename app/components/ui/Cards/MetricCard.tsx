@@ -1,6 +1,7 @@
 import { FlameIcon, UserIcon, DownloadIcon, TicketIcon } from "../../icons/DesignIcon";
 import styles from "./MetricCard.module.css";
 import type { ReactNode } from "react";
+import TiltCard from "../TiltCard/TiltCard";
 
 export type MetricIcon = "flame" | "user" | "download" | "ticket";
 
@@ -22,7 +23,7 @@ interface Props {
 
 export default function MetricCard({ icon, value, title, content }: Props) {
   return (
-    <div className={styles.metricCard}>
+    <TiltCard className={styles.metricCard}>
       
       {icon && (
         <div
@@ -38,6 +39,6 @@ export default function MetricCard({ icon, value, title, content }: Props) {
       <p className={styles.title}>{title}</p>
 
       {content && <p className={styles.content}>{content}</p>}
-    </div>
+    </TiltCard>
   );
 }

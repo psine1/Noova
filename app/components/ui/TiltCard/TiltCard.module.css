@@ -1,0 +1,36 @@
+.shell {
+  perspective: 1200px;
+  height: 100%;
+  width: 100%;
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+.content {
+  display: contents;
+}
+
+.glare {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  opacity: 0;
+  pointer-events: none;
+  mix-blend-mode: screen;
+}
+
+@media (hover: none) {
+  .card {
+    transform: none !important;
+  }
+
+  .glare {
+    display: none;
+  }
+}
