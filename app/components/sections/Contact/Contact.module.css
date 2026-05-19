@@ -418,7 +418,8 @@
 }
 
 .submit:hover:not(:disabled) {
-  background: var(--color-primary-hover);
+  background: var(--color-primary);
+  color: #000;
 }
 
 .submit:disabled {
