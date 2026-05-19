@@ -67,27 +67,22 @@ export const cases = [
   },
 
   {
-    slug: "sertal-ads",
-    title: "Sertal - RichMedia Ads",
+    slug: "subway-ads",
+    title: "Subway - Banners Ads 300",
 
     sizes: [
       {
-        label: "300x600",
-        width: 300,
-        height: 600,
-        src: "https://psine1.github.io/demo-ads/300x600-Sertal/",
-      },
-    
+        label: "Portrait",
+        width: 382,
+        height: 700,
+        src: "https://psine1.github.io/demo-ads/subway-maze6/",
+      },  
+              
     ],
 
-    solution: [
-      "Animaciones de alta calidad con GSAP",
-      "Elementos interactivos hover",
-      "Cargas progresivas optimizadas",
-    ],
-
-    stack: ["HTML5", "GSAP 3.x", "DoubleClick"],
-  },    
+    solution: ["Motion graphics de alta fidelidad"],
+    stack: ["HTML5", "Canvas"],
+  }, 
 
   {
     slug: "goojitzu-ads",
@@ -221,23 +216,7 @@ export const cases = [
     stack: ["HTML5", "Canvas"],
   },    
   
-  {
-    slug: "subway-ads",
-    title: "Subway - Banners Ads 300",
 
-    sizes: [
-      {
-        label: "Portrait",
-        width: 382,
-        height: 700,
-        src: "https://psine1.github.io/demo-ads/subway-maze6/",
-      }, 
-              
-    ],
-
-    solution: ["Motion graphics de alta fidelidad"],
-    stack: ["HTML5", "Canvas"],
-  }, 
   
   
 

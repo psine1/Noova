@@ -22,7 +22,7 @@ export const portfolioItems: PortfolioItem[] = [
   {
       slug: "universal-ads",
       image: "/images/ads_thumb/orlando.png",
-      logo: "/images/tricks.svg",
+      logo: "/images/ads_thumb/logo_universal.png",
       title: "Universal · Rich Media interactivo",
       alt: "Universal RichMedia Ads producido por NOOVA",
       description: "Video HTML5 con lógicas de interacción.",
@@ -38,12 +38,12 @@ export const portfolioItems: PortfolioItem[] = [
       variant: "compact", 
   },
   {
-      slug: "sertal-ads",
-      image: "/images/ads_thumb/sertal.png",
-      logo: "/images/tricks.svg",
-      title: "Sertal · Producción de alto volumen",
-      alt: "Sertal Banners Ads 360 producido por NOOVA",
-      description: "Optimización de peso en cada formato.",
+      slug: "subway-ads",
+      image: "/images/ads_thumb/subway.png",
+      logo: "/images/ads_thumb/logo_subway.png",
+      title: "Subway · Producción de playable ad",
+      alt: "Subway Banner Ads playable producido por NOOVA",
+      description: "Motion graphics con mecánicas jugables.",
       variant: "compact", 
   },
   {
@@ -58,7 +58,7 @@ export const portfolioItems: PortfolioItem[] = [
   {
       slug: "wonder-ads",
       image: "/images/ads_thumb/wonder.png",
-      logo: "/images/tricks.svg",
+      logo: "/images/ads_thumb/logo_wonder.png",
       title: "Wonder · Formatos estándar",
       alt: "Wonder Banners Ads producido por NOOVA",
       description: "Máxima visibilidad en pauta programática.",
@@ -67,7 +67,7 @@ export const portfolioItems: PortfolioItem[] = [
   {
     slug: "bottleo-ads",
       image: "/images/ads_thumb/botleo.png",
-      logo: "/images/tricks.svg",
+      logo: "/images/ads_thumb/logo_botleo.png",
       title: "Botle' O - Playable Ads",
       alt: "Botle O Banners Ads 360 producido por NOOVA",
       description: "Playable Ads con Geolocalización y juegos interactivo.",
@@ -85,7 +85,7 @@ export const portfolioItems: PortfolioItem[] = [
   {
     slug: "ventura-country-ads",
       image: "/images/ads_thumb/venture_country.png",
-      logo: "/images/tricks.svg",
+      logo: "/images/ads_thumb/logo_ventura.png",
       title: "Ventura · Banners Ads 360",
       alt: "Ventura Banners Ads 360 producido por NOOVA",
       description: "Piezas para pauta programática en EEUU.",
@@ -94,7 +94,7 @@ export const portfolioItems: PortfolioItem[] = [
   {
     slug: "nhtsa-ads",
       image: "/images/ads_thumb/cars.png",
-      logo: "/images/tricks.svg",
+      logo: "/images/ads_thumb/logo_nhtsa.png",
       title: "NHTSA · Banners Ads 360",
       alt: "NHTSA Banners Ads 360 producido por NOOVA",
       description: "Formatos regulados para campaña federal.",
