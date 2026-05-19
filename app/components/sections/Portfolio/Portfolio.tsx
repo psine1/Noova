@@ -26,7 +26,7 @@ export const portfolioItems: PortfolioItem[] = [
       image: "/images/tienda.jpg",
       logo: "",
       title: "UX/UI para Plataforma Ecommerce",
-      description: "E-commerce · Brand Scaling",
+      description: "E-commerce · Brand Scaling · Desarrollo front-end",
       variant: "default", 
       alt: "UX UI diseño de plataforma ecommerce Tienda Digital realizado por NOOVA"
   },
@@ -34,8 +34,8 @@ export const portfolioItems: PortfolioItem[] = [
       slug: "/works/ads", 
       image: "/images/universal.jpg",
       logo: "",
-      title: "Producción HTML5 para Campañas Digitales",
-      description: "Rich Media Ad · Animación HTML5 · Google Ads",
+      title: "Banners HTML5 · Rich Media",
+      description: "Animación · Google Ads · Programática",
       variant: "default", 
       alt: "Producción de banners animados Rich Media HTML5 para campañas digitales — por NOOVA"
   },
